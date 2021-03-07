@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список профессий</title>
+</head>
+<body>
+<h1>Список профессий</h1>
+{% set jobs_list = ['инженер-исследователь', 'пилот', 'экзобиолог', 'врач', 'инженер по терраформированию', 
+                        'климатолог', 'специалист по радиоционной защите', 'астрогеолог', 'гляциолог'] %}
+{% if param == 'ul' %}
+    <ul>
+        {% for j in jobs_list %}
+        <li>{{ j }}
+        </li>
+        {% endfor %}
+    </ul>
+{% elif param == 'ol' %}
+    <ol>
+        {% for j in jobs_list %}
+        <li>{{ j }}
+        </li>
+        {% endfor %}
+    </ol>
+{% endif %}
+</body>
+</html>
